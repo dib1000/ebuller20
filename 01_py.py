@@ -3,6 +3,10 @@
 #K05 -- Better Living Through Amalgamation
 # 2021-9-27
 
+#DISCOVERIES:
+#We remembered that dictionaries exist
+#it's elif instead of else if
+
 import random
 pd1 = ["emma","shriya","william","aaron","owen","haotian","ishraq","ivan l",
        "michelle", "naomi", "lewis cass", "renggeng", "oscar", "tami", "aryman",
