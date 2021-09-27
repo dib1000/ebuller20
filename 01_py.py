@@ -4,7 +4,10 @@
 # 2021-9-27
 
 import random
-pd1 = ["emma","shriya","william","aaron"]
+pd1 = ["emma","shriya","william","aaron","owen","haotian","ishraq","ivan l",
+       "michelle", "naomi", "lewis cass", "renggeng", "oscar", "tami", "aryman",
+       "alejandro","deven","tina","yusuf","ella","ltw", "julia","angela"
+       ,"christopher","sadid","gavin","ivan m"]
 pd2 = ["andrew", "yuqing","michael"]
 krewes = {
     "one" : pd1,
