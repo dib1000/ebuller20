@@ -1,4 +1,7 @@
-#Question: What do you mean by "print a name"
+#Emma Buller
+#SoftDev
+#K05 -- Refactoring
+# 2021--9--26
 
 import random
 pd1 = ["emma","shriya","william","aaron"]
