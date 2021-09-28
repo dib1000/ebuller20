@@ -11,8 +11,11 @@ import random
 pd1 = ["emma","shriya","william","aaron","owen","haotian","ishraq","ivan l",
        "michelle", "naomi", "lewis cass", "renggeng", "oscar", "tami", "aryman",
        "alejandro","deven","tina","yusuf","ella","ltw", "julia","angela"
-       ,"christopher","sadid","gavin","ivan m"]
-pd2 = ["andrew", "yuqing","michael"]
+       ,"christopher","sadid","gavin","ivan m","rayat","tomas","theo","shyne"]
+pd2 = ["andrew", "yuqing","michael", "raymond", "kevin","josephine","alif",
+       "william","justin","andy","rachel","shadman","david","daniel","cameron",
+       "austin","thomas","yaying","jessie","eric","jonathan","zhaoyu","joshua",
+       "naokai","yoonah","roshani","qina","han","sophie"]
 krewes = {
     "one" : pd1,
     "two" : pd2
