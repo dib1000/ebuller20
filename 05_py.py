@@ -3,9 +3,15 @@
 #K05 -- Better Living Through Amalgamation
 # 2021-9-27
 
-#DISCOVERIES:
-#We remembered that dictionaries exist
-#it's elif instead of else if
+# SUMMARY OF TRIO DISCUSSION (Emma, Gavin, Naomi)
+# 
+# DISCOVERIES
+# We rememberd that dictionaries existed in python and also how to use them
+# its "elif" instead of "else if"
+# QUESTIONS
+# 
+# COMMENTS
+# We need to be careful with typing as we could make silly mistakes.
 
 import random
 pd1 = ["emma","shriya","william","aaron","owen","haotian","ishraq","ivan l",
