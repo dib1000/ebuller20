@@ -9,10 +9,9 @@ contents = file.read()
 contentlist = contents.split("\n")
 
 
-weight = 0
 occupations = {}
-for x in range(1,len(contentlist)-1):
-    item = contentlist[x].split("\t")
-    print(item[0])
-    print(item[1])
+for x in range(1,len(contentlist)-2):
+    item = contentlist[x].split(" \t")
+    occupations[item[0]] = float(item[1])
 
+print(occupations)
