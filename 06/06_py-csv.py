@@ -2,6 +2,7 @@
 #SoftDev
 #K06 -- Stl/O: Divine your Destiny! (Parsing through files)
 #2021-09-29
+import random
 
 def selectJob():
     #reading file and getting rid of the new lines
@@ -14,4 +15,9 @@ def selectJob():
     for x in range(1,len(contentlist)-2): #no top line or last 2 lines that don't have the same structure as the other lines of file
         item = contentlist[x].split(" \t") #the job names and percentage were connected by this sequence of characters
         occupations[item[0]] = float(item[1])
-    print(occupations)
+
+    jobs = list(occupations.keys())
+    percentages = list(occupations.values())
+    job = random.choices(jobs, percentages, k = 1);
+    return job[0]
+    
