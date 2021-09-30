@@ -1,4 +1,7 @@
-<HEADING>
+Chestnut (Shriya Anand, Emma Buller, Edwin Zheng)
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity (Learning from Other Code)
+2021-09-30
 
 The command saves a lot of folders in the new directory
 myherozero
