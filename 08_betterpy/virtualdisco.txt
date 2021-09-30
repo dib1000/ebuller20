@@ -1,0 +1,4 @@
+<HEADING>
+
+The command saves a lot of folders in the new directory
+myherozero
