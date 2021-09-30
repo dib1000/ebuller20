@@ -3,5 +3,17 @@ SoftDev
 K08 -- Cross Pollination and Virtual Insanity (Learning from Other Code)
 2021-09-30
 
-The command saves a lot of folders in the new directory
-myherozero
+The command makes a new folder called myherozero.
+In that folder, there are a lot of other folders. 
+
+Bin has a lot of files 
+that you can interact with in the terminal. It also has a lot files 
+with the name activate.
+
+Include is just an empty folder
+
+lib and lib64 (which is a lightblue color instead of dark blue like the other folders).
+Both of these folders have an easy_install.py file in them. The files just say to
+run a main function.
+
+The share folder has a lot of files with the .whl ending
