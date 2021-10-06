@@ -13,3 +13,6 @@ def hello_world():
     return "No hablo queso!"
 
 app.run()
+
+#Our prediction is that "about to print __name__... __main" will be printed in the same line in the terminal after you open the link. The link should take you to a webpage that says "No hablo queso"
+#Post test: It prints it in 2 lines (not 1)
