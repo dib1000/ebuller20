@@ -15,3 +15,5 @@ def hello_world():
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
     app.run()
+
+   # The results should be the same as the last file since __name__ should be equal to main (because we are running the file directly)
