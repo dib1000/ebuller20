@@ -12,3 +12,5 @@ def hello_world():
     return "No hablo queso!"  # Q3: Will this appear anywhere? How u know?
 
 app.run()  # Q4: Where have you seen similar construcs in other languages?
+
+#It will print __main__ once you copy and paste the link in the terminal. The link will open a webpage that says "No hablo queso".
