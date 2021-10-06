@@ -11,3 +11,5 @@ def hello_world():
     return "No hablo queso!"
 
 app.run()
+
+#We predict that nothing be printed in the terminal. The webpage should say "No hablo queso"
