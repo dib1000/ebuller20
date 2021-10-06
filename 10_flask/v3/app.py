@@ -14,3 +14,6 @@ def hello_world():
 
 app.debug = True
 app.run()
+
+# We predict that the same as last version will be but now the "debug mode" should be "on" instead of "off"
+# Post-Test: prediction was true and there is also a debugger PIN provided.
