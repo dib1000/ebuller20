@@ -1,0 +1,14 @@
+Cashew (Shriya, Anand, Emma Buller, William Chen)
+SoftDev
+K11 -- Some Things Never Change (STATIC)
+2021-10-06
+
+PREDICTION: We think that if we run app.py in the terminal, the link that it opens will print "no hablo queso" and the terminal will print "the __name__ of this module is... __main__". The debug mode will be on and the debugger will be active. The debugger pin will be provided.
+OBSERVATION: This did happen.
+
+PREDICTION: If we open http://localhost:5000/static/foo.html or just open the file directly, we will see "Is this plaintext though?"
+OBSERVATION: If we open http://localhost:5000/static/foo.html, then we will see "Is this plaintext, though" once you have activated the app.py file. If the app.py file is not activated, you will be unable to connect to the file.
+
+PREDICTION: If we opened the link http://localhost:5000/static/foo, then we would see the contents of the file foo.
+OBSERVATION: If we open http://localhost:5000/static/foo once app.py has been activated will let you download that file. If app.py has not been activated, you will get a connection error
+
