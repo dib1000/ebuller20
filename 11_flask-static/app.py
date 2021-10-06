@@ -1,6 +1,7 @@
-#Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2021 
+#Cashew (Shriya Anand, Emma Buller, William Chen)
+#SoftDev
+#K06 -- Stl/O: Divine your Destiny! (Parsing through files)
+#2021-09-29
 
 # DEMO 
 # basics of /static folder
