@@ -1,0 +1,15 @@
+Cashew (Shriya Anand, Emma Buller, William Chen)
+SoftDev
+K12: ... or The Only Constant is Change
+2021-10-07
+
+Q0: What happens if you remove render_template from this line?
+A0: We predict that if we remove render_template from that line, we would get an error because the method must return it.
+Check: Pointing the browser to the main page worked pointing the browser to the template file gave an error.
+
+Q1:Can all of your teammates confidently predict the URL to use to load this page?
+A1:The URL should be the usual url with "/my_foist_template" at the end.
+Check: This was correct.
+
+Q2: What is the significance of each argument?
+A2:The first argument is the template that the web page will model itself after. The inputs will be made in that file. The second argument is one of the arguments (in this case, it is the title that will be displayed on the webpage). The third argument is another argument (in this case, it is the list that will be displayed line by line in the webpage)
