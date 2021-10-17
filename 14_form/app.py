@@ -52,7 +52,8 @@ def authenticate():
     print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template('response.html', username = request.args['username'], method = request.args['sub1'])
+    m = request.method
+    return render_template('response.html', username = request.args['username'], method = m)
 
 
 if __name__ == "__main__": #false if this file imported as module
