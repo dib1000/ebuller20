@@ -8,6 +8,6 @@
   -It will just load the file since there are no inputs to put into the template
   -Probably because the app.route is "/"
 - request.args will have items in the dictionary after you inputted stuff to the login loginpage
- -The dictionary keys will be the names of the inputs
- -If you were to run request.args(['username']) in disp_loginpage(), there will be an error
- - We use the inputs to put text into parts of the response.html file
+  -The dictionary keys will be the names of the inputs
+  -If you were to run request.args(['username']) in disp_loginpage(), there will be an error
+  -We use the inputs "username" and "method" to put text into parts of the response.html file
