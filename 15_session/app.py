@@ -42,11 +42,13 @@ def disp_loginpage():
     # #print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)  #prints various information
-    return render_template( 'login.html' ) #webpage is just the login.html file in templates
+    return render_template( 'login.html', error = '' ) #webpage is just the login.html file in templates
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
+    if request.args['username'] == '':
+        return emptyError()
     #print("\n\n\n")
     #print("***DIAG: this Flask obj ***")
     #print(app) #same thing as disp_loginpage()
@@ -66,15 +68,14 @@ def authenticate():
 
 @app.route("/out")
 def out():
-    print(len(session))
     if len(session) > 0:
         session.pop("name")
-    print(session)
-    return render_template('login.html')
+    return render_template('login.html', error = '')
 
 @app.route("/empty")
 def emptyError():
-    return '''<h1>EMPTY INPUT ERROR </h1>'''
+    message = "Empty username! Login again "
+    return render_template('login.html', error = message)
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
