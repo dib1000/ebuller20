@@ -47,8 +47,14 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
+    if(request.args['username'] == ''):
+        return Error("No username inputted. Login again. ")
+    if(request.args['password'] == ''):
+        return Error("No password inputted. Login again.")
     if (request.args['username'] != "Snaps") or (request.args['password'] != "snaps123"):
-        return Error('response.html', username = session["name"])
+        if request.args['username'] != "Snaps":
+            return Error("Incorrect Username! Login again. ")
+        return Error("Incorrect Password! Login again." )
     #print("\n\n\n")
     #print("***DIAG: this Flask obj ***")
     #print(app) #same thing as disp_loginpage()
@@ -77,8 +83,7 @@ def out():
     return render_template('login.html', error = '')
 
 @app.route("/empty")
-def Error():
-    message = "BAD! Login again "
+def Error(message):
     return render_template('login.html', error = message)
 
 @app.route("/in")
