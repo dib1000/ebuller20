@@ -30,7 +30,7 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 def disp_loginpage():
     print(session)
     if session.get("name"):
-        return authenticate()
+        return loggedIn()
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
     # print(app) #prints app
@@ -47,8 +47,8 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    if request.args['username'] == '':
-        return emptyError()
+    if (request.args['username'] != "Snaps") or (request.args['password'] != "snaps123"):
+        return Error('response.html', username = session["name"])
     #print("\n\n\n")
     #print("***DIAG: this Flask obj ***")
     #print(app) #same thing as disp_loginpage()
@@ -63,19 +63,27 @@ def authenticate():
     m = request.method #either get or post
     if len(session) == 0:
         session["name"] = request.args['username']
+        session["password"] = request.args['password']
     #print(request.form['username'])
     return render_template('response.html', username = session["name"], method = m)
 
 @app.route("/out")
 def out():
+    #print(len(session))
     if len(session) > 0:
         session.pop("name")
+        session.pop("password")
+    #print(len(session))
     return render_template('login.html', error = '')
 
 @app.route("/empty")
-def emptyError():
-    message = "Empty username! Login again "
+def Error():
+    message = "BAD! Login again "
     return render_template('login.html', error = message)
+
+@app.route("/in")
+def loggedIn():
+    return render_template('response.html', username = session["name"], method = "GET")
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
