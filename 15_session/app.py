@@ -6,8 +6,8 @@
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
-from flask import session
-import os
+from flask import session           #cookies
+import os #for secret_key
 
 #the conventional way:
 #from flask import Flask, render_template, request
@@ -28,9 +28,9 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    print(session)
+    #print(session)
     if session.get("name"):
-        return loggedIn()
+        return loggedIn() #remembers when you're logged in
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
     # print(app) #prints app
@@ -47,12 +47,12 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    if(request.args['username'] == ''):
+    if(request.args['username'] == ''): #empty username
         return Error("No username inputted. Login again. ")
-    if(request.args['password'] == ''):
+    if(request.args['password'] == ''): #empty password
         return Error("No password inputted. Login again.")
     if (request.args['username'] != "Snaps") or (request.args['password'] != "snaps123"):
-        if request.args['username'] != "Snaps":
+        if request.args['username'] != "Snaps": #incorrect Username
             return Error("Incorrect Username! Login again. ")
         return Error("Incorrect Password! Login again." )
     #print("\n\n\n")
@@ -67,24 +67,23 @@ def authenticate():
     #print("***DIAG: request.headers ***")
     #print(request.headers) #same as disp_loginpage
     m = request.method #either get or post
-    if len(session) == 0:
-        session["name"] = request.args['username']
-        session["password"] = request.args['password']
+    session["name"] = request.args['username'] #inputs cookies
+    session["password"] = request.args['password'] #inputs cookies
     #print(request.form['username'])
     return render_template('response.html', username = session["name"], method = m)
 
 @app.route("/out")
-def out():
+def out(): #logging out
     #print(len(session))
-    if len(session) > 0:
+    if len(session) > 0: #gets rid of cookie
         session.pop("name")
         session.pop("password")
     #print(len(session))
-    return render_template('login.html', error = '')
+    return render_template('login.html', error = '') #goes back to login page
 
 @app.route("/empty")
-def Error(message):
-    return render_template('login.html', error = message)
+def Error(message): #inputted message for optimiziation
+    return render_template('login.html', error = message) #message depends on the error checked in authenticate
 
 @app.route("/in")
 def loggedIn():
