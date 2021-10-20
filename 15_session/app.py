@@ -28,17 +28,20 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app) #prints app
-    print("***DIAG: request obj ***")
-    print(request) #prints link and methods
-    print("***DIAG: request.args ***")
-    print(request.args) #prints empty dictionary since there have been no arguments inputted
-    #print("***DIAG: request.args['username']  ***") <- only works after submitting form
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)  #prints various information
+    print(session)
+    if session.get("name"):
+        return authenticate()
+    # print("\n\n\n")
+    # print("***DIAG: this Flask obj ***")
+    # print(app) #prints app
+    # print("***DIAG: request obj ***")
+    # print(request) #prints link and methods
+    # print("***DIAG: request.args ***")
+    # print(request.args) #prints empty dictionary since there have been no arguments inputted
+    # #print("***DIAG: request.args['username']  ***") <- only works after submitting form
+    # #print(request.args['username'])
+    # print("***DIAG: request.headers ***")
+    # print(request.headers)  #prints various information
     return render_template( 'login.html' ) #webpage is just the login.html file in templates
 
 
@@ -56,16 +59,22 @@ def authenticate():
     #print("***DIAG: request.headers ***")
     #print(request.headers) #same as disp_loginpage
     m = request.method #either get or post
-    session["name"] = request.args['username']
-    print(session)
+    if len(session) == 0:
+        session["name"] = request.args['username']
     #print(request.form['username'])
-    return render_template('response.html', username = request.args['username'], method = m)
+    return render_template('response.html', username = session["name"], method = m)
 
 @app.route("/out")
 def out():
-    session.pop("name")
+    print(len(session))
+    if len(session) > 0:
+        session.pop("name")
     print(session)
     return render_template('login.html')
+
+@app.route("/empty")
+def emptyError():
+    return '''<h1>EMPTY INPUT ERROR </h1>'''
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
