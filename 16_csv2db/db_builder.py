@@ -13,8 +13,16 @@ db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
 #==========================================================
+c.execute("CREATE TABLE roster (name TEXT, age INTEGER, id INTEGER)")
 
-
+with open('students.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        name = row['name']
+        age = row['age']
+        id = row['id']
+        command = "INSERT INTO roster VALUES ('" + name + "'," + age + "," + id + ")"
+        c.execute(command)
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
