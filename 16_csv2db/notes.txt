@@ -19,6 +19,9 @@ What to do
 
 NOTABLE
 - Have to add '' to denote TEXT/strings in the string you feed execute. If there are no string around it, it will be considered a number of some sort
+- newline='' can cause problems between systems. Windows and Linux have different symbols for new lines which can make this code segment problematic.
+- sqlite is like java in the sense that you need to add semicolons after everything to denote line endings. But you don't have to do this when using sqlite in a python file.
+- You don't have to capitalize INSERT and other terms of sqlite3, it's just the common convention.
 
 Useful Links
 https://docs.python.org/3/library/sqlite3.html
