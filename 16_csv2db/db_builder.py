@@ -38,8 +38,8 @@ with open('courses.csv') as file:
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+# command = ""          # test SQL stmt in sqlite3 shell, save as string
+# c.execute(command)    # run SQL statement
 
 #==========================================================
 
