@@ -15,14 +15,15 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 #==========================================================
 c.execute("CREATE TABLE roster (name TEXT, age INTEGER, id INTEGER)")
 
-with open('students.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
+with open('students.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter= ",")
     for row in reader:
-        name = row['name']
-        age = row['age']
-        id = row['id']
-        command = "INSERT INTO roster VALUES ('" + name + "'," + age + "," + id + ")"
-        c.execute(command)
+        name = row[0]
+        age = row[1]
+        id = row[2]
+        if(age != "age"):
+            command = "INSERT INTO roster VALUES ('" + name + "'," + age + "," + id + ")"
+            c.execute(command);
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
