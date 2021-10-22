@@ -24,6 +24,17 @@ with open('students.csv') as csvfile:
         if(age != "age"):
             command = "INSERT INTO roster VALUES ('" + name + "'," + age + "," + id + ")"
             c.execute(command);
+
+c.execute("CREATE TABLE classes (code TEXT, mark INTEGER, id INTEGER)")
+with open('courses.csv') as file:
+    r = csv.reader(file, delimiter= ",")
+    for row in r:
+        code = row[0]
+        mark = row[1]
+        id = row[2]
+        if(mark != "mark"):
+            command = "INSERT INTO classes VALUES ('" + code + "'," + mark + "," + id + ")"
+            c.execute(command);
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
