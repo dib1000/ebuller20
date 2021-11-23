@@ -11,7 +11,8 @@ app = Flask(__name__)
 @app.route("/")
 def REST():
     d = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=uhAKVvq7ohfNOGPx5IMu3bUGcAsaikXHR7IYMtjw")
-    return render_template("main.html", img=d.url)
+    x = json.loads(d)
+    return render_template("main.html", img=x[url])
 
 if __name__ == "__main__":
     app.debug = True
