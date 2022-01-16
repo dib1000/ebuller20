@@ -1,0 +1,88 @@
+<!--
+  Canada Foxes - Deven Maheshwari, Emma Buller, Lucas Lee, Naomi Naranjo
+  SoftDev
+  P01 - ArRESTed Development
+  2022-01-04
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+</head>
+<div class="grid-x grid-padding-x">
+    <div class="cell">
+        <h1 class="text-center">{{movie['title']}}</h1>
+    </div>
+    </div>
+    <div class="media-object stack-for-small">
+      <div class="media-object-section medium-4 large-3">
+        <div class="thumbnail">
+          <img width= "70%" height = "70%" src="{{movie['image']}}">
+        </div>
+        <h4>Release Date: {{movie['releaseDate']}} <br>
+          Runtime: {{movie['runtimeStr']}}
+        </h4>
+      </div>
+      <div class="media-object-section">
+        <p> {{movie['plot']}} <br>
+            Watch the trailer <a href="{{movie['trailer']['link']}}"> here!</a>
+             <br> <br>
+        <b>Director(s):</b> {{movie['directors']}} <br>
+        <b>Writer(s): </b> {{movie['writers']}} <br>
+        <b>Genres: </b> {{movie['genres']}} <br>
+        </p>
+        <h4> Actors </h4>
+        <div class="grid-container">
+  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+        {%for n in range(0,3)%}
+        <div class="card" style="width: 100px;">
+  <div class="card-divider">
+    {{movie['actorList'][n]['name']}}
+  </div>
+  <img src="{{movie['actorList'][n]['image']}}">
+  <div class="card-section">
+    <h4>{{movie['actorList'][n]['asCharacter']}}</h4>
+    </div>
+    </div>
+        {%endfor%}
+      </div></div>
+      </div>
+    </div>
+    <h1>Ratings and Reviews</h1>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <figure>
+      <a href="https://www.imdb.com">
+      <img src="https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png" height="250 px" width="250 px"></a>
+      <figcaption>{{movie['imDbRating']}}</figcaption>
+      </figure>
+      <figure>
+      <a href="https://www.metacritic.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Metacritic.svg/1024px-Metacritic.svg.png" height="250 px" width="250 px"> </a>
+      <figcaption>{{movie['metacriticRating']}}</figcaption>
+      </figure>
+     </div>
+     <div class="grid-x grid-margin-x">
+      {%for n in reviews%}
+      <div class="callout">
+        {%if (n['rate'] | int) >= 80 %}
+        <span class="label success">{{n['rate']}}</span>
+        {%elif (n['rate'] | int) >= 60 %}
+        <span class="label warning"> {{n['rate']}}</span>
+        {%else%}
+        <span class="label alert">{{n['rate']}}</span>
+        {%endif%}
+        <h4>
+          {{n['publisher']}}
+          </h4>
+          <h6> {{n['author']}} </h6>
+        <p> {{n['content']}} </p>
+        </div>
+      {%endfor%}
+   </div>
+<body>
+  </body>
+  </html>
