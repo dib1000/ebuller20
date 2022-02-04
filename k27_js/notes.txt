@@ -13,7 +13,6 @@ DISCO
 
 QCC
 -----------------------------------------------------------------
-* What's the difference between comments and discussion?
 * What languages does Atom recognize? It doesn't colorcode Scheme and that makes us sad.
 * To run JavaScript files, we insert the file through a script tag in the HTML file and then we run the functions on the console
 * The syntax is fxnName(args)
