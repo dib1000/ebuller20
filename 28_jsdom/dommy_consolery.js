@@ -1,27 +1,8 @@
-/*
-   your PPTASK:
-
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-
-    		Write with your future self or teammates in mind.
-
-    		If you find yourself falling out of flow mode, consult
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
+// short :: Emma Buller, Shyne Choi
+// SoftDev pd1
 // K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
+// 2022-02-08
+// time spent: 30
 // --------------------------------------------------
 
 
@@ -46,7 +27,7 @@ var o = { 'name' : 'Thluffy', //like json wow
           age : 15,
           items : [10, 20, 30, 40],
           morestuff : {a : 1, b : 'ayo'},
-          func : function(x) { //funciton in dictionary! wow
+          func : function(x) { //function in dictionary! wow
             return x+30; //how do you use this function?
           }
         }; //different types in one dictionary
@@ -87,14 +68,6 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
-// FAC
-var fact = function(n) {
-  if (n <= 1) {
-    return 1;
-  }
-  return n * fact(n - 1);
-};
-
 var fib = function(n) {
   if (n < 1) {
     return 0;
@@ -104,4 +77,35 @@ var fib = function(n) {
   }
   return fib(n - 1) + fib(n - 2)
 }; //semicolons at the end of function definitions!
+
+document.getElementById("fibresult").innerHTML = "Fibonacci Sequence 5th number: " + fib(4);
+
+
+// FAC
+var fact = function(n) {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * fact(n - 1);
+};
+
+document.getElementById("factresult").innerHTML = "8! = " + fact(8);
+
+
 // GCD
+var gcd = function(a, b) {
+  if (a > b) {
+    var t = a; a = b; b = t;
+  }
+  var x = 1
+  var i = 2
+  while (i <= a) {
+    if ((a % i == 0) && (b % i == 0)) {
+      x = i
+    }
+    i++;
+  }
+  return x;
+};
+
+document.getElementById("gcdresult").innerHTML = "GCD of 60 and 30: " + gcd(60, 30);
