@@ -1,0 +1,7 @@
+wat (Michael Borczuk and Emma Buller)
+SoftDev
+K29 -- DOMfoolery++
+2022-2-10
+time spent: 0.5 hours
+
+- render functions are helpful
