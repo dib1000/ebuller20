@@ -27,22 +27,40 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-
+  ctx.clearRect(0,0,500,500);
   // YOUR CODE HERE
 };
 
 
 var radius = 0;
-var growing = true; //turns false when circle radius reaches 250 
+var growing = true; //turns false when circle radius reaches 250
 
 //var drawDot = function() {
 var drawDot = () => {
   console.log("drawDot invoked...")
+  if(radius == 0) {
+    growing = true;
+  }
+  if(radius == 250) {
+    growing = false;
+  }
+  if(growing) {
+    radius = radius + 1;
+  }
+  else {
+    radius = radius - 1;
+  }
+  clear();
   var fillingCircle = new Path2D();
-  fillingCircle.arc(250,250,50,0,Math.PI * 2);
+  fillingCircle.arc(250,250,radius,0,Math.PI * 2);
   ctx.fill(fillingCircle);
   ctx.stroke(fillingCircle);
 
+  if(requestID) {
+    window.cancelAnimationFrame(requestID);
+  }
+
+  requestID = window.requestAnimationFrame(drawDot);
   // YOUR CODE HERE
 
   /*
@@ -62,6 +80,7 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
+  window.cancelAnimationFrame(requestID);
 
   // YOUR CODE HERE
   /*
