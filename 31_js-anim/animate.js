@@ -1,7 +1,8 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
+// short :: Emma Buller, Shyne Choi
+// SoftDev pd1
 // K31 -- canvas based JS animation
-// 2022-02-15t
+// 2022-02-15
+//time spent: 30
 
 // model for HTML5 canvas-based animation
 
