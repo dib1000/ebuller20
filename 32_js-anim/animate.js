@@ -99,6 +99,12 @@ var stopIt = () => {
   */
 };
 
+var moveDVD = () => {
+  x = Math.floor(Math.random() * 500);
+  y = Math.floor(Math.random() * 500);
+  requestID = window.requestAnimationFrame(moveLogo);
+};
+
 var moveLogo = () => {
   clear();
   var dx = 1;
@@ -115,4 +121,4 @@ var moveLogo = () => {
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
-movieButton.addEventListener("click", moveLogo);
+movieButton.addEventListener("click", moveDVD);
