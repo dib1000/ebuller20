@@ -21,8 +21,10 @@ var ctx = c.getContext("2d");
 //image spawn
 var dvd = new Image();
 dvd.src = "logo_dvd.jpg"
-var x = Math.floor(Math.random(500));
-var y = Math.floor(Math.random(500));
+var x;
+var y;
+var dx;
+var dy;
 
 //set fill color to team color
 ctx.fillStyle = 'rgb(0, 255, 255)';
@@ -102,13 +104,19 @@ var stopIt = () => {
 var moveDVD = () => {
   x = Math.floor(Math.random() * 500);
   y = Math.floor(Math.random() * 500);
+  dx = 1;
+  dy = 1;
   requestID = window.requestAnimationFrame(moveLogo);
 };
 
 var moveLogo = () => {
+  if (x === 0 || x === 440) {
+  dx *= -1;
+}
+if (y === 0 || y === 460) {
+  dy *= -1;
+}
   clear();
-  var dx = 1;
-  var dy = 1;
   x += dx;
   y += dy;
   ctx.drawImage(dvd, x, y, 60, 40);
