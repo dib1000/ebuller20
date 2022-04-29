@@ -1,0 +1,11 @@
+Emma Buller
+SoftDev
+K34 -- Another DB Perspective
+2022-04-28
+
+- How apps use data is everchanging and can cause for dramatic restrcturing of RDBMS databases
+- MongoDB lets you easy change your application by having the appication and datamodel build on each other
+- Need to determine applicaton workload to help determine data size, operations to manipulate data, and how to structure database
+- link data has refernces/roles connected to the thing. Embed data has the data within the information ofthe object
+- Have to get the details about how large the data and its uses are
+- The document approach seems to be efficient
