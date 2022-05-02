@@ -1,0 +1,14 @@
+Emma Buller
+SoftDev
+K36 -- Another DB Perspective
+2022-05-03
+
+- Follows JSON format. What came first?
+- Keys must be in qhotes
+- How popular is BSON?
+- There are different ways to export (BSON vs JSON)
+- import puts data in instance/cluster, export does opposite
+- Many documents and collections built in
+- There is an admin database, kind of like how shells have a sudo user
+- commands build on specficity of location they are being used at
+- Are the "any 20 documents" random or determined by order they are in the document

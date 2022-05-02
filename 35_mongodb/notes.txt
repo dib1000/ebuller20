@@ -1,0 +1,12 @@
+Emma Buller
+SoftDev
+k35 -- Another DB Perspective
+2022-05-03
+
+- Stores data in documents, not rows and columns, but still structured
+- Document notation looks similar to CSS. Are they related? 
+- Multiple instances in a cluster makes sure that data can stay intact even if one of the instances goes down
+- Atlas is an accessible way to store data and run apps and has extra features 
+- 0.0.0.0 is a way for the database to connect to all ip addresses
+- There's a built in ide for the course.
+- 
