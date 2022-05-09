@@ -1,0 +1,20 @@
+Emma Buller
+SoftDev
+K37 -- Another DB Perspective (MONGO)
+2022-05-09
+
+- _id forces documents to have unique values
+- ObjectId or just inserting various strings lets you insert values for _id
+- findOne() without inputs finds a random document
+- insert returns a WriteResult
+- You can insert document with id value but no _id value (_id is randomly generated using ObjectId)
+- Collections can have various types of documents with different values
+- Insert crashes after one error
+- can toggle off adding multiple docs from left to right
+- Can create collections when doing db.<new_collection_name>.insert
+- Store objects within objects
+- MQL has various operators with $ at the beginning
+- inc adds, set changes value
+- new values to dictionary get added through $set update
+- you should only use deleteOne when querying based on _id, runs risk to deleting many docs
+- different from dropping collection

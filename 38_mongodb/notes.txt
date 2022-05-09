@@ -1,0 +1,25 @@
+Emma Buller
+SoftDev
+K38 -- Another DB Perspective
+2022-05-09
+
+- Query operators help you locate and compare data
+- { <field>" {"Operator": <value>}}
+- can use multiple query operators 
+- may not be useful if there are only two values for a field
+- This chapter makes you do more of the exercises
+- Logic operators are the usual (and, or, not)
+- square brackets denote array of statements
+- nor is kind of the opposite of and
+- $and is seen implicitly in querys in general
+- Use and when you need to include same operator more than once in a query
+- If we need a numerical value, do we need to do find().count(), or can we just use count()
+- expr lets you compare values within document (with a dollar sign in the front)
+- aggregation has operator field first
+- can only use $fields in $expr?
+- only mix 1s and 0s if you get rid of _id value
+- only use 1s and 0s. Using both will show error
+-elemMatch is used in array values
+- projection is the second value of the find/count functions
+-elemMatch can be used in the nonprojection field
+- go more in depth with .
