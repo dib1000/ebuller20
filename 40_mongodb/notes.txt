@@ -1,0 +1,19 @@
+Emma Buller
+SoftDev
+K40 -- Another DB Perspective
+2022-05-12
+
+- There are pre-made indexes 
+- Can create aggregation pipelines in explorer
+- Order matters in aggregation
+- Use Java and Python with Mongo
+- Realm lets you use mongo in other apps/software
+- Charts visualize data
+-  a map of america!
+- admin, config, local are databases that you should not touch
+- json and table formats in compass
+- schema provides you stats
+- compass: ide but not online
+- explain path helps you optimize performance (look at less docs to get results)
+- validation lets you make rules
+- 

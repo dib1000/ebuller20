@@ -1,0 +1,18 @@
+Emma Buller
+SoftDev
+K39 -- Another DB Perspective
+2022-05-12
+
+- Aggregation is for finding things in a certain order in an array
+- Filters = words with dollar signs at beginning
+- Group filters and puts data into different parts of the answer array
+- 67 zipcodes with 0 people?
+- cursor method applies to results that are found
+- SORT FIRST
+- indexes make things faster (less sort time)
+- indexes can compound each other
+- Data is stored the way that it is used
+- Main considerations of needed data + how will it be queried
+- Data that is used together should be stored together
+- Upsert = Update + Insert (will either update or insert doc depending on if document exists)
+- Only use upsert for conditional updates
